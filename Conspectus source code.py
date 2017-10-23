@@ -3,6 +3,7 @@ import tkinter.ttk as ttk
 import tkinter.scrolledtext as ScrollTxt
 from tkinter import END,E,W,filedialog
 import nltk
+nltk.download('punkt')
 from nltk.tokenize import sent_tokenize, RegexpTokenizer
 import networkx as netx
 import itertools

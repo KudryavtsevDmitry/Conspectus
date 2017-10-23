@@ -6,4 +6,9 @@ For determining sentence similarity was using phrasal overlap based on Lesk algo
 
 This application support 14 languages: danish, dutch, english, finnish, french, german, hungarian, italian, norwegian, portuguese, romanian, russian, spanish, swedish. 
 
+Ubuntu installation instruction:
+sudo apt-get install python3-tk, 
+sudo pip3 install networkx nltk
+
+
 Using dependencies: NetworkX, NLTK

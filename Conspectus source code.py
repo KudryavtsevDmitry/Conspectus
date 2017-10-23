@@ -97,11 +97,11 @@ class BottomButtonsFrame(Tk.Frame):
         Tk.Frame.__init__(self,master,)
         self.grid(row=2,column=0,sticky=W+E)
         self.CompressRate=50
-        self.LangSupport=''
-        self.stemLang='english'
+        self.LangSupport=[]
+        self.stemLang='English'
         for lang in SnowballStemmer.languages:
             if (lang!='porter'):
-                self.LangSupport+=lang+' '  
+                self.LangSupport.append(lang[0].upper()+lang[1:])
         self.CreateWidgets() 
         
     def CreateWidgets(self):        
@@ -184,7 +184,7 @@ def ComputeSummary():
      
 def PhrasalOverlap(fstSent,sndSent):
 
-     stemmer = SnowballStemmer(bottomButtonsFrame.stemLang)
+     stemmer = SnowballStemmer(bottomButtonsFrame.stemLang[0].lower()+bottomButtonsFrame.stemLang[1:])
      tokenizer=RegexpTokenizer(r"\w+")
      cnt1=Counter()
      cnt2=Counter()
